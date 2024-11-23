@@ -1,13 +1,12 @@
-const { waitForDebugger } = require("inspector");
+const { v4: uuidv4 } = require("uuid");
 const {
   readArticlesFile,
   writeArticlesFile,
 } = require("../utills/fileHandler");
-
 const { validateComment } = require("../utills/validator");
 
 function generateId() {
-  return Date.now().toString();
+  return uuidv4();
 }
 
 function createComment(commentData, res) {

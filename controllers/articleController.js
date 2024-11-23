@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require("uuid");
 const {
   readArticlesFile,
   writeArticlesFile,
@@ -5,7 +6,7 @@ const {
 const { validateArticle } = require("../utills/validator");
 
 function generateId() {
-  return Date.now().toString();
+  return uuidv4();
 }
 
 function readAllArticles(res) {

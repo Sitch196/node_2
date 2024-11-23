@@ -9,6 +9,7 @@
   "author": "levan",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "uuid": "^11.0.3"
   }
 }

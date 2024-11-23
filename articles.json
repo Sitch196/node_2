@@ -12,6 +12,29 @@
         "author": "JON JONSON",
         "id": "1732362969469",
         "date": "2024-11-23T11:56:09.469Z"
+      },
+      {
+        "articleId": "1732361340587",
+        "text": "Needs more work .try again ",
+        "author": "george macalister",
+        "id": "6ffca989-0fcf-42f5-9bec-26b770da5260",
+        "date": "2024-11-23T17:12:05.361Z"
+      }
+    ]
+  },
+  {
+    "title": "Article about programming",
+    "text": "This is a Dummy text for article",
+    "author": "Michael Smith",
+    "id": "f63f6ac9-63c8-4804-976a-347583f590dd",
+    "date": "2024-11-23T17:08:31.432Z",
+    "comments": [
+      {
+        "articleId": "f63f6ac9-63c8-4804-976a-347583f590dd",
+        "text": "Its not for everyone i guess .still needs some work ",
+        "author": "micky mouse ",
+        "id": "770b65d4-43fc-41f3-a93d-8365c482faf6",
+        "date": "2024-11-23T17:13:02.661Z"
       }
     ]
   }
