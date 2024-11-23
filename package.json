@@ -1,0 +1,14 @@
+{
+  "name": "node_2",
+  "version": "1.0.0",
+  "description": "making requests ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "levan",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
