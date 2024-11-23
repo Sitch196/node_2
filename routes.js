@@ -38,6 +38,11 @@ function handleRoute(req, res) {
     return handleBodyParsing(req, res, commentController.createComment);
   }
 
+  if (pathname === "/api/comments/delete" && method === "DELETE") {
+    const id = parsedUrl.query.id;
+    return commentController.deleteComment(id, res);
+  }
+
   res.writeHead(404, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ code: 404, message: "Not Found" }));
 }

@@ -45,3 +45,10 @@
 2024-11-23T11:43:40.603Z | POST | /api/comments/create
 2024-11-23T11:43:49.050Z | GET | /api/articles/readall
 2024-11-23T11:44:18.802Z | GET | /api/articles/readall
+2024-11-23T11:52:58.197Z | GET | /api/articles/readall
+2024-11-23T11:53:40.730Z | DELETE | /api/comments/delete?id=1732362220610
+2024-11-23T11:53:46.500Z | GET | /api/articles/readall
+2024-11-23T11:53:59.621Z | DELETE | /api/comments/delete?id=1732362184839
+2024-11-23T11:54:03.035Z | GET | /api/articles/readall
+2024-11-23T11:56:09.465Z | POST | /api/comments/create
+2024-11-23T11:56:15.662Z | GET | /api/articles/readall

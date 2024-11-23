@@ -1,3 +1,4 @@
+const { waitForDebugger } = require("inspector");
 const {
   readArticlesFile,
   writeArticlesFile,
@@ -40,6 +41,32 @@ function createComment(commentData, res) {
   res.end(JSON.stringify(newComment));
 }
 
+function deleteComment(id, res) {
+  const articles = readArticlesFile();
+
+  let commentFound = false;
+  const updatedArticles = articles.map((article) => {
+    const initialCommentsLength = article.comments.length;
+    article.comments = article.comments.filter((comment) => comment.id !== id);
+
+    if (article.comments.length !== initialCommentsLength) {
+      commentFound = true;
+    }
+
+    return article;
+  });
+
+  if (!commentFound) {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ code: 404, message: "Comment not found" }));
+  }
+
+  writeArticlesFile(updatedArticles);
+  res.writeHead(204);
+  res.end();
+}
+
 module.exports = {
   createComment,
+  deleteComment,
 };
