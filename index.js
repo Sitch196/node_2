@@ -1,10 +1,12 @@
 const http = require("http");
 const { initArticlesFile } = require("./utills/fileHandler");
 const { logRequest } = require("./utills/logger");
+const { handleRoute } = require("./routes");
 
 const server = http.createServer((req, res) => {
   logRequest(req);
-  res.end("Jello");
+
+  handleRoute(req, res);
 });
 
 const PORT = 4400;
