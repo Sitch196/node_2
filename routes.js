@@ -20,6 +20,14 @@ function handleRoute(req, res) {
     return handleBodyParsing(req, res, articleController.createArticle);
   }
 
+  if (pathname === "/api/articles/update" && method === "PUT") {
+    const id = parsedUrl.query.id;
+    console.log(id);
+    return handleBodyParsing(req, res, (data, res) =>
+      articleController.updateArticle(id, data, res)
+    );
+  }
+
   res.writeHead(404, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ code: 404, message: "Not Found" }));
 }

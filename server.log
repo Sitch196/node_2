@@ -23,3 +23,8 @@
 2024-11-23T10:59:52.466Z | POST | /api/articles/create
 2024-11-23T11:07:28.160Z | GET | /api/articles/readall
 2024-11-23T11:07:43.444Z | GET | /api/articles/read?id=1732359408299
+2024-11-23T11:16:55.838Z | PUT | /api/articles/read?id=1732359408299
+2024-11-23T11:17:15.988Z | GET | /api/articles/readall
+2024-11-23T11:20:04.130Z | PUT | /api/articles/read?id=1732359592475
+2024-11-23T11:20:57.588Z | PUT | /api/articles/update?id=1732359592475
+2024-11-23T11:21:04.717Z | GET | /api/articles/readall

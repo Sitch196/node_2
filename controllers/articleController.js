@@ -49,8 +49,33 @@ function createArticle(articleData, res) {
   res.writeHead(201, { "Content-Type": "application/json" });
   res.end(JSON.stringify(newArticle));
 }
+
+function updateArticle(id, updatedData, res) {
+  if (!validateArticle(updatedData)) {
+    res.writeHead(400, { "Content-Type": "application/json" });
+    return res.end(
+      JSON.stringify({ code: 400, message: "Invalid article data" })
+    );
+  }
+
+  const articles = readArticlesFile();
+  const index = articles.findIndex((a) => a.id === id);
+
+  if (index === -1) {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ code: 404, message: "Article not found" }));
+  }
+
+  articles[index] = { ...articles[index], ...updatedData };
+  writeArticlesFile(articles);
+
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end(JSON.stringify(articles[index]));
+}
+
 module.exports = {
   readAllArticles,
   readArticle,
   createArticle,
+  updateArticle,
 };
