@@ -22,10 +22,14 @@ function handleRoute(req, res) {
 
   if (pathname === "/api/articles/update" && method === "PUT") {
     const id = parsedUrl.query.id;
-    console.log(id);
     return handleBodyParsing(req, res, (data, res) =>
       articleController.updateArticle(id, data, res)
     );
+  }
+
+  if (pathname === "/api/articles/delete" && method === "DELETE") {
+    const id = parsedUrl.query.id;
+    return articleController.deleteArticle(id, res);
   }
 
   res.writeHead(404, { "Content-Type": "application/json" });

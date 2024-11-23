@@ -28,3 +28,9 @@
 2024-11-23T11:20:04.130Z | PUT | /api/articles/read?id=1732359592475
 2024-11-23T11:20:57.588Z | PUT | /api/articles/update?id=1732359592475
 2024-11-23T11:21:04.717Z | GET | /api/articles/readall
+2024-11-23T11:24:12.782Z | DELETE | /api/articles/delete?id=1732359592475
+2024-11-23T11:24:41.734Z | DELETE | /api/articles/delete?id=1732359592475
+2024-11-23T11:24:51.495Z | GET | /api/articles/readall
+2024-11-23T11:26:12.227Z | DELETE | /api/articles/delete?id=1732359564401
+2024-11-23T11:26:32.900Z | GET | /api/articles/readall
+2024-11-23T11:27:15.945Z | DELETE | /api/articles/delete?id=1732359408299

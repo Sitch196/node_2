@@ -73,9 +73,24 @@ function updateArticle(id, updatedData, res) {
   res.end(JSON.stringify(articles[index]));
 }
 
+function deleteArticle(id, res) {
+  const articles = readArticlesFile();
+  const filteredArticles = articles.filter((a) => a.id !== id);
+
+  if (filteredArticles.length === articles.length) {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ code: 404, message: "Article not found" }));
+  }
+
+  writeArticlesFile(filteredArticles);
+  res.writeHead(204);
+  res.end("Article Deleted ");
+}
+
 module.exports = {
   readAllArticles,
   readArticle,
   createArticle,
   updateArticle,
+  deleteArticle,
 };
