@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "title": "second Blog Post",
+    "text": "Welcome to my seond article",
+    "author": "jane Doe",
+    "id": "1732361340587",
+    "date": "2024-11-23T11:29:00.587Z",
+    "comments": [
+      {
+        "articleId": "1732361340587",
+        "text": "Great article!",
+        "author": "Comment Author",
+        "id": "1732362184839",
+        "date": 1732362184839
+      },
+      {
+        "articleId": "1732361340587",
+        "text": "Great article!",
+        "author": "Comment Author",
+        "id": "1732362220610",
+        "date": "2024-11-23T11:43:40.610Z"
+      }
+    ]
+  }
+]

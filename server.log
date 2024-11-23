@@ -34,3 +34,14 @@
 2024-11-23T11:26:12.227Z | DELETE | /api/articles/delete?id=1732359564401
 2024-11-23T11:26:32.900Z | GET | /api/articles/readall
 2024-11-23T11:27:15.945Z | DELETE | /api/articles/delete?id=1732359408299
+2024-11-23T11:29:00.579Z | POST | /api/articles/create
+2024-11-23T11:29:05.038Z | GET | /api/articles/readall
+2024-11-23T11:29:21.695Z | POST | /api/articles/create
+2024-11-23T11:29:28.521Z | GET | /api/articles/readall
+2024-11-23T11:36:32.025Z | POST | /api/comments/create
+2024-11-23T11:37:10.320Z | POST | /api/comments/create
+2024-11-23T11:39:49.276Z | POST | /api/comments/create
+2024-11-23T11:43:04.830Z | POST | /api/comments/create
+2024-11-23T11:43:40.603Z | POST | /api/comments/create
+2024-11-23T11:43:49.050Z | GET | /api/articles/readall
+2024-11-23T11:44:18.802Z | GET | /api/articles/readall

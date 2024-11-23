@@ -1,12 +1,13 @@
 const url = require("url");
 const articleController = require("./controllers/articleController");
+const commentController = require("./controllers/commentController");
 
 function handleRoute(req, res) {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
   const method = req.method;
 
-  // article routes
+  // articles
   if (pathname === "/api/articles/readall" && method === "GET") {
     return articleController.readAllArticles(res);
   }
@@ -32,6 +33,11 @@ function handleRoute(req, res) {
     return articleController.deleteArticle(id, res);
   }
 
+  //comments
+  if (pathname === "/api/comments/create" && method === "POST") {
+    return handleBodyParsing(req, res, commentController.createComment);
+  }
+
   res.writeHead(404, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ code: 404, message: "Not Found" }));
 }
@@ -46,6 +52,7 @@ function handleBodyParsing(req, res, callback) {
       const data = JSON.parse(body);
       callback(data, res);
     } catch (error) {
+      console.log(error);
       res.writeHead(400, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ code: 400, message: "Invalid JSON" }));
     }
