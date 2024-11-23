@@ -11,6 +11,11 @@ function handleRoute(req, res) {
     return articleController.readAllArticles(res);
   }
 
+  if (pathname === "/api/articles/read" && method === "GET") {
+    const id = parsedUrl.query.id;
+    return articleController.readArticle(id, res);
+  }
+
   if (pathname === "/api/articles/create" && method === "POST") {
     return handleBodyParsing(req, res, articleController.createArticle);
   }
@@ -26,11 +31,9 @@ function handleBodyParsing(req, res, callback) {
   });
   req.on("end", () => {
     try {
-      console.log("revived body", body);
       const data = JSON.parse(body);
       callback(data, res);
     } catch (error) {
-      console.error("Parse error:", error);
       res.writeHead(400, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ code: 400, message: "Invalid JSON" }));
     }

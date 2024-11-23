@@ -14,6 +14,19 @@ function readAllArticles(res) {
   res.end(JSON.stringify(articles));
 }
 
+function readArticle(id, res) {
+  const articles = readArticlesFile();
+  const article = articles.find((a) => a.id === id);
+
+  if (article) {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(article));
+  } else {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ code: 404, message: "Article not found" }));
+  }
+}
+
 function createArticle(articleData, res) {
   if (!validateArticle(articleData)) {
     res.writeHead(400, { "Content-Type": "application/json" });
@@ -38,5 +51,6 @@ function createArticle(articleData, res) {
 }
 module.exports = {
   readAllArticles,
+  readArticle,
   createArticle,
 };

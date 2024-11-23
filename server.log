@@ -21,3 +21,5 @@
 2024-11-23T10:56:48.290Z | POST | /api/articles/create
 2024-11-23T10:59:24.391Z | POST | /api/articles/create
 2024-11-23T10:59:52.466Z | POST | /api/articles/create
+2024-11-23T11:07:28.160Z | GET | /api/articles/readall
+2024-11-23T11:07:43.444Z | GET | /api/articles/read?id=1732359408299
