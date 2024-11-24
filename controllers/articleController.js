@@ -31,9 +31,7 @@ function readArticle(id, res) {
 function createArticle(articleData, res) {
   if (!validateArticle(articleData)) {
     res.writeHead(400, { "Content-Type": "application/json" });
-    return res.end(
-      JSON.stringify({ code: 400, message: "Invalid article data" })
-    );
+    return res.end(JSON.stringify({ code: 400, message: "Request Invalid" }));
   }
 
   const articles = readArticlesFile();
@@ -54,9 +52,7 @@ function createArticle(articleData, res) {
 function updateArticle(id, updatedData, res) {
   if (!validateArticle(updatedData)) {
     res.writeHead(400, { "Content-Type": "application/json" });
-    return res.end(
-      JSON.stringify({ code: 400, message: "Invalid article data" })
-    );
+    return res.end(JSON.stringify({ code: 400, message: "Request Invalid" }));
   }
 
   const articles = readArticlesFile();

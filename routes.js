@@ -66,7 +66,7 @@ function handleBodyParsing(req, res, callback) {
       callback(data, res);
     } catch (error) {
       res.writeHead(400, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({ code: 400, message: "Invalid JSON" }));
+      res.end(JSON.stringify({ code: 400, message: "Request Invalid" }));
     }
   });
 }

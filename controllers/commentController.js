@@ -12,9 +12,7 @@ function generateId() {
 function createComment(commentData, res) {
   if (!validateComment(commentData)) {
     res.writeHead(400, { "Content-Type": "application/json" });
-    return res.end(
-      JSON.stringify({ code: 400, message: "Invalid comment data" })
-    );
+    return res.end(JSON.stringify({ code: 400, message: "Request Invalid" }));
   }
 
   const articles = readArticlesFile();
