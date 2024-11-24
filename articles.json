@@ -1,18 +1,11 @@
 [
   {
-    "title": "second Blog Post",
-    "text": "Welcome to my seond article",
-    "author": "jane Doe",
+    "title": "another Updated Article Title",
+    "text": " another Updated content",
+    "author": "another Updated Author",
     "id": "1732361340587",
     "date": "2024-11-23T11:29:00.587Z",
     "comments": [
-      {
-        "articleId": "1732361340587",
-        "text": "Great article bro!",
-        "author": "JON JONSON",
-        "id": "1732362969469",
-        "date": "2024-11-23T11:56:09.469Z"
-      },
       {
         "articleId": "1732361340587",
         "text": "Needs more work .try again ",
@@ -35,6 +28,13 @@
         "author": "micky mouse ",
         "id": "770b65d4-43fc-41f3-a93d-8365c482faf6",
         "date": "2024-11-23T17:13:02.661Z"
+      },
+      {
+        "articleId": "f63f6ac9-63c8-4804-976a-347583f590dd",
+        "text": "TEST COMMENT TEST COMMENT ",
+        "author": "TEST TEST ",
+        "id": "0b145d08-7f53-40c9-a0ca-f92bf8d1b1a4",
+        "date": "2024-11-24T13:33:02.926Z"
       }
     ]
   }

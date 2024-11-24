@@ -5,7 +5,6 @@ const { handleRoute } = require("./routes");
 
 const server = http.createServer((req, res) => {
   logRequest(req);
-
   handleRoute(req, res);
 });
 

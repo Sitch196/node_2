@@ -14,6 +14,7 @@ function handleRoute(req, res) {
 
   if (pathname === "/api/articles/read" && method === "GET") {
     const id = parsedUrl.query.id;
+
     return articleController.readArticle(id, res);
   }
 
@@ -43,6 +44,13 @@ function handleRoute(req, res) {
     return commentController.deleteComment(id, res);
   }
 
+  if (parsedUrl.pathname === "/" || parsedUrl.pathname === "") {
+    res.writeHead(302, {
+      Location: "/api/articles/readall",
+    });
+    return res.end();
+  }
+
   res.writeHead(404, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ code: 404, message: "Not Found" }));
 }
@@ -57,7 +65,6 @@ function handleBodyParsing(req, res, callback) {
       const data = JSON.parse(body);
       callback(data, res);
     } catch (error) {
-      console.log(error);
       res.writeHead(400, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ code: 400, message: "Invalid JSON" }));
     }
